@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Result View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ResultViewController" customModule="FirstPlace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXK-7f-4Uq">
+                                <rect key="frame" x="32" y="581" width="311" height="36"/>
+                                <color key="backgroundColor" name="backButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="bEj-Ot-ahz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Vissza az eredményekhez">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Első helyezett lettél" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jz-EF-9A7">
+                                <rect key="frame" x="80" y="320" width="215" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRATULÁLUNK!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYI-Tg-Tjg">
+                                <rect key="frame" x="66" y="60" width="243" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cup30" translatesAutoresizingMaskIntoConstraints="NO" id="llN-W8-RWn">
+                                <rect key="frame" x="128" y="157" width="119" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="cZf-Xq-e8J"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="podium30" translatesAutoresizingMaskIntoConstraints="NO" id="Pgt-6U-NaM">
+                                <rect key="frame" x="125" y="498" width="125" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6hL-Bs-Oat"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Pgt-6U-NaM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A7o-cE-pCn"/>
+                            <constraint firstItem="2jz-EF-9A7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="DNB-nk-DPs"/>
+                            <constraint firstItem="llN-W8-RWn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fkp-S0-pfo"/>
+                            <constraint firstItem="Pgt-6U-NaM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="GtU-kb-tPg"/>
+                            <constraint firstItem="DYI-Tg-Tjg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="IoR-Ww-T8C"/>
+                            <constraint firstItem="DYI-Tg-Tjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ll8-qE-QaN"/>
+                            <constraint firstItem="llN-W8-RWn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="Oxx-3h-oF0"/>
+                            <constraint firstItem="DYI-Tg-Tjg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="UYV-pj-eJe"/>
+                            <constraint firstItem="KXK-7f-4Uq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V1g-no-eeJ"/>
+                            <constraint firstItem="llN-W8-RWn" firstAttribute="top" secondItem="DYI-Tg-Tjg" secondAttribute="bottom" constant="58.5" id="fr8-Sf-reG"/>
+                            <constraint firstItem="KXK-7f-4Uq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="l4k-f0-tIW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KXK-7f-4Uq" secondAttribute="bottom" constant="50" id="mMM-aR-0bR"/>
+                            <constraint firstItem="KXK-7f-4Uq" firstAttribute="top" secondItem="Pgt-6U-NaM" secondAttribute="bottom" constant="13" id="oET-cj-hyN"/>
+                            <constraint firstItem="2jz-EF-9A7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r9K-Kh-LWw"/>
+                            <constraint firstItem="2jz-EF-9A7" firstAttribute="top" secondItem="llN-W8-RWn" secondAttribute="bottom" constant="48" id="wOf-sJ-Y0X"/>
+                            <constraint firstItem="DYI-Tg-Tjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zGt-Xo-HY9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cup30" width="124" height="119"/>
+        <image name="podium30" width="126" height="72"/>
+        <namedColor name="backButtonColor">
+            <color red="0.058823529411764705" green="0.51764705882352946" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
