@@ -19,6 +19,7 @@ class ResultCalculator {
     
     private let resultProvider = ResultProvider()
     
+    //TODO: rev-ALi: átnevezés resultType -> gameType
     func recordResult(_ score: Score, resultType: ResultType) -> Ranking {
         var results = resultProvider.getResults(for: resultType)
         var index = 0

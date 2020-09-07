@@ -28,7 +28,9 @@ class ResultPodiumViewController: UIViewController {
     }
     
     var args: Arg = .init()
+    //TODO: rev-ALi: ez a property miért public?
     let resultProvider: ResultProvider = .init()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -80,6 +82,7 @@ extension ResultType {
         }
     }
     
+    //TODO: rev-ALi: switch nélkül megoldható, egyetlen sorral
     var buttonTitle: String {
         switch self {
         case .result30:
@@ -91,6 +94,7 @@ extension ResultType {
         }
     }
     
+    //TODO: rev-ALi: switch nélkül megoldható, egyetlen sorral
     var imagePodium: UIImage {
         switch self {
         case .result30:
@@ -113,6 +117,7 @@ extension ResultType {
         }
     }
     
+    //TODO: rev-ALi: switch nélkül megoldható, egyetlen sorral
     var imageCup: UIImage {
         switch self {
         case .result30:
@@ -124,6 +129,8 @@ extension ResultType {
         }
     }
     
+    //TODO: rev-ALi: switch nélkül megoldható, egyetlen sorral
+    //TODO: rev-ALi: az imageCup elnevezés jó, ahhoz képest nem értem honnan jön ez a medal2, nevezzük át az imageCup-nál alkalmazott minta szerint
     var medal2: UIImage {
         switch self {
         case .result30:
@@ -135,6 +142,8 @@ extension ResultType {
         }
     }
     
+    //TODO: rev-ALi: switch nélkül megoldható, egyetlen sorral
+    //TODO: rev-ALi: az imageCup elnevezés jó, ahhoz képest nem értem honnan jön ez a medal2, nevezzük át az imageCup-nál alkalmazott minta szerint
     var medal3: UIImage {
         switch self {
         case .result30:

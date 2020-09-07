@@ -8,6 +8,7 @@
 
 import Foundation
 
+//TODO: rev-ALi: Jobb elnevezés lenne a GameType
 enum ResultType {
     case result30
     case result45
@@ -20,11 +21,14 @@ class ResultProvider {
     
     let storage = UserDefaults.standard
     
+    //TODO: rev-ALi: a típus átnevezés miatt itt jobb lenne a következő elnevezés:
+    // func clearResults(of gameType: GameType)
     func clear(resultType: ResultType) {
         storage.removeObject(forKey: resultType.storageKey)
         storage.synchronize()
     }
     
+    //TODO: rev-ALi: átnevezés resultType -> gameType
     func getResults(for resultType: ResultType) -> [Score] {
         guard let results = storage.value(forKey: resultType.storageKey) as? [Score] else {
             return []
@@ -32,6 +36,7 @@ class ResultProvider {
         return results
     }
     
+    //TODO: rev-ALi: átnevezés resultType -> gameType
     func save(results: [Score], of resultType: ResultType) {
         storage.set(Array(results.prefix(3)), forKey: resultType.storageKey)
         storage.synchronize()

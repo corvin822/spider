@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     
     var args: Args = .init()
     
+    //TODO: rev-ALi: beszédes neveket használjunk, a többi outlet jó, de ezt nem tudom megfejteni
     @IBOutlet weak var label0: UILabel!
     
     @IBOutlet weak var upButton: UIButton!
@@ -25,15 +26,21 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var labelTimer: UILabel!
     
+    //TODO: rev-ALi: ezek a property-k miért publikusak?
     var timer: Timer?
     
     var positionSpider = 9
     var positionWorm = 1
+
+    //TODO: rev-ALi: beszédes neveket használjunk, a többi property elnevezés jó, de ezt nem tudom megfejteni
     var i = 1
     var resultScore = 0
+    //TODO: rev-ALi: túl általános elnevezés, minősíteni kéne azzal, hogy mit számol
+    // secondCount
     var counter: Int = 0
     
-    
+    //TODO: rev-ALi: elég egy üres sort kihagyni tagolásként
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +54,7 @@ class GameViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
+    //TODO: rev-ALi: a counter átnevezése után ezt a függvényt is érdemes volna átnevezni
     @objc func updateCounter() {
         
         if counter > 1 {

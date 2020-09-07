@@ -10,6 +10,7 @@ import UIKit
 
 class ResultListViewController: UIViewController {
     
+    //TODO: rev-ALi: elég egy üres sort kihagyni tagolásként
     
     override func viewDidLoad() {
         super.viewDidLoad()
