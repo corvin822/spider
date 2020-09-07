@@ -18,7 +18,20 @@
 		E3D4148E24FC52FF008E1793 /* ResultList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D4148D24FC52FF008E1793 /* ResultList.storyboard */; };
 		E3D4149124FC5316008E1793 /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D4148F24FC5316008E1793 /* Result.storyboard */; };
 		E3D4149224FC5316008E1793 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D4149024FC5316008E1793 /* ResultViewController.swift */; };
+		E3FB8B6225040E7A0017DC9E /* ResultProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB8B6125040E7A0017DC9E /* ResultProviderTests.swift */; };
+		E3FB8B6A250412C70017DC9E /* ResultCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB8B69250412C70017DC9E /* ResultCalculator.swift */; };
+		E3FB8B6C2504139D0017DC9E /* ResultCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FB8B6B2504139D0017DC9E /* ResultCalculatorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3FB8B6425040E7A0017DC9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3D4146624FC5221008E1793 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3D4146D24FC5221008E1793;
+			remoteInfo = Spider;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E3206E4D24FC592200AABCB2 /* ResultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProvider.swift; sourceTree = "<group>"; };
@@ -34,10 +47,22 @@
 		E3D4148D24FC52FF008E1793 /* ResultList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultList.storyboard; sourceTree = "<group>"; };
 		E3D4148F24FC5316008E1793 /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		E3D4149024FC5316008E1793 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E3FB8B5F25040E7A0017DC9E /* SpiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3FB8B6125040E7A0017DC9E /* ResultProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProviderTests.swift; sourceTree = "<group>"; };
+		E3FB8B6325040E7A0017DC9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3FB8B69250412C70017DC9E /* ResultCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalculator.swift; sourceTree = "<group>"; };
+		E3FB8B6B2504139D0017DC9E /* ResultCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E3D4146B24FC5221008E1793 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3FB8B5C25040E7A0017DC9E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E3206E4D24FC592200AABCB2 /* ResultProvider.swift */,
+				E3FB8B69250412C70017DC9E /* ResultCalculator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -69,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D4147024FC5221008E1793 /* Spider */,
+				E3FB8B6025040E7A0017DC9E /* SpiderTests */,
 				E3D4146F24FC5221008E1793 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D4146E24FC5221008E1793 /* Spider.app */,
+				E3FB8B5F25040E7A0017DC9E /* SpiderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +150,16 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		E3FB8B6025040E7A0017DC9E /* SpiderTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3FB8B6125040E7A0017DC9E /* ResultProviderTests.swift */,
+				E3FB8B6B2504139D0017DC9E /* ResultCalculatorTests.swift */,
+				E3FB8B6325040E7A0017DC9E /* Info.plist */,
+			);
+			path = SpiderTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,18 +180,40 @@
 			productReference = E3D4146E24FC5221008E1793 /* Spider.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E3FB8B5E25040E7A0017DC9E /* SpiderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3FB8B6825040E7A0017DC9E /* Build configuration list for PBXNativeTarget "SpiderTests" */;
+			buildPhases = (
+				E3FB8B5B25040E7A0017DC9E /* Sources */,
+				E3FB8B5C25040E7A0017DC9E /* Frameworks */,
+				E3FB8B5D25040E7A0017DC9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3FB8B6525040E7A0017DC9E /* PBXTargetDependency */,
+			);
+			name = SpiderTests;
+			productName = SpiderTests;
+			productReference = E3FB8B5F25040E7A0017DC9E /* SpiderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E3D4146624FC5221008E1793 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Dukai Andrea";
 				TargetAttributes = {
 					E3D4146D24FC5221008E1793 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					E3FB8B5E25040E7A0017DC9E = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = E3D4146D24FC5221008E1793;
 					};
 				};
 			};
@@ -171,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				E3D4146D24FC5221008E1793 /* Spider */,
+				E3FB8B5E25040E7A0017DC9E /* SpiderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +249,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3FB8B5D25040E7A0017DC9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,10 +269,28 @@
 				E3D4148B24FC52EA008E1793 /* ResultPodiumViewController.swift in Sources */,
 				E3D4148C24FC52EA008E1793 /* ResultListViewController.swift in Sources */,
 				E3206E4E24FC592200AABCB2 /* ResultProvider.swift in Sources */,
+				E3FB8B6A250412C70017DC9E /* ResultCalculator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3FB8B5B25040E7A0017DC9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3FB8B6C2504139D0017DC9E /* ResultCalculatorTests.swift in Sources */,
+				E3FB8B6225040E7A0017DC9E /* ResultProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3FB8B6525040E7A0017DC9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3D4146D24FC5221008E1793 /* Spider */;
+			targetProxy = E3FB8B6425040E7A0017DC9E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E3D4147C24FC5221008E1793 /* LaunchScreen.storyboard */ = {
@@ -368,6 +454,48 @@
 			};
 			name = Release;
 		};
+		E3FB8B6625040E7A0017DC9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USPWYNR793;
+				INFOPLIST_FILE = SpiderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.corvin82.SpiderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spider.app/Spider";
+			};
+			name = Debug;
+		};
+		E3FB8B6725040E7A0017DC9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = USPWYNR793;
+				INFOPLIST_FILE = SpiderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.corvin82.SpiderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spider.app/Spider";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -385,6 +513,15 @@
 			buildConfigurations = (
 				E3D4148324FC5221008E1793 /* Debug */,
 				E3D4148424FC5221008E1793 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3FB8B6825040E7A0017DC9E /* Build configuration list for PBXNativeTarget "SpiderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3FB8B6625040E7A0017DC9E /* Debug */,
+				E3FB8B6725040E7A0017DC9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

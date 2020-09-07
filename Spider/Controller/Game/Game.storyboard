@@ -18,9 +18,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-Dh-xEJ">
                                 <rect key="frame" x="100" y="57" width="175" height="48"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-v3-NX0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-v3-NX0">
                                         <rect key="frame" x="160" y="0.0" width="15" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-UB-J9j" userLabel="LabelTimer">
+                                        <rect key="frame" x="0.0" y="14" width="47" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -31,8 +37,11 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="6yh-v3-NX0" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="top" id="09o-MN-Vzs"/>
+                                    <constraint firstItem="6yh-v3-NX0" firstAttribute="trailing" secondItem="uAM-UB-J9j" secondAttribute="trailing" constant="128" id="3Wl-fa-yu7"/>
+                                    <constraint firstItem="uAM-UB-J9j" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="76n-de-6IZ"/>
                                     <constraint firstItem="j6d-Pz-YQY" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="top" id="Cvy-AU-ZLl"/>
                                     <constraint firstItem="6yh-v3-NX0" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="FJr-A3-Hp1"/>
+                                    <constraint firstItem="uAM-UB-J9j" firstAttribute="leading" secondItem="RVF-Dh-xEJ" secondAttribute="leading" id="Fkq-Wl-nyT"/>
                                     <constraint firstAttribute="height" constant="48" id="HuE-aj-Ugf"/>
                                     <constraint firstItem="j6d-Pz-YQY" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="VAp-tW-iaO"/>
                                     <constraint firstAttribute="trailing" secondItem="6yh-v3-NX0" secondAttribute="trailing" id="WJT-CD-mNA"/>
@@ -234,14 +243,26 @@
                     <connections>
                         <outlet property="downButton" destination="uwW-DK-NKg" id="w4v-P3-Oek"/>
                         <outlet property="label0" destination="6yh-v3-NX0" id="LAc-Gp-82J"/>
+                        <outlet property="labelTimer" destination="uAM-UB-J9j" id="UnY-at-jmJ"/>
                         <outlet property="leftButton" destination="Ewj-P6-cno" id="kmf-S9-kQZ"/>
                         <outlet property="rightButton" destination="FHu-Rv-3gd" id="6Ie-Mf-1Yx"/>
                         <outlet property="upButton" destination="VQM-u0-QD5" id="Tkj-Jc-fet"/>
+                        <segue destination="JgY-8G-n3R" kind="show" identifier="result" id="dju-w2-wV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+            <point key="canvasLocation" x="167" y="120"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="54Z-nh-Of7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" id="JgY-8G-n3R" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mf2-bQ-MBa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ACK-QI-fBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-167"/>
         </scene>
     </scenes>
     <resources>

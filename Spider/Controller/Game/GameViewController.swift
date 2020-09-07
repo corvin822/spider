@@ -10,32 +10,60 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    @IBOutlet weak var label11: UILabel!
-    @IBOutlet weak var label12: UILabel!
-    @IBOutlet weak var label13: UILabel!
-    @IBOutlet weak var label21: UILabel!
-    @IBOutlet weak var label22: UILabel!
-    @IBOutlet weak var label23: UILabel!
-    @IBOutlet weak var label31: UILabel!
-    @IBOutlet weak var label32: UILabel!
-    @IBOutlet weak var label33: UILabel!
+    class Args {
+        var resultType: ResultType = .result30
+    }
+    
+    var args: Args = .init()
+    
     @IBOutlet weak var label0: UILabel!
-
+    
     @IBOutlet weak var upButton: UIButton!
     @IBOutlet weak var downButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var rightButton: UIButton!
-   
+    
+    @IBOutlet weak var labelTimer: UILabel!
+    
+    var timer: Timer?
     
     var positionSpider = 9
     var positionWorm = 1
     var i = 1
-    var k = 0
+    var resultScore = 0
+    var counter: Int = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.hidesBackButton = true
+        title = "Kukasz vadászat"
+        
+        counter = args.resultType.gameLenght
+        
+        labelTimer.text = "\(counter) "
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounter() {
+        
+        if counter > 1 {
+            counter -= 1
+            labelTimer.text = "\(counter)"
+        } else  {
+            labelTimer.text = "0"
+            timer?.invalidate()
+            performSegue(withIdentifier: "result", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let resultViewController = segue.destination as? ResultViewController {
+            resultViewController.args.results = resultScore
+            resultViewController.args.resultType = args.resultType
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,7 +71,7 @@ class GameViewController: UIViewController {
         downButton.layer.cornerRadius = downButton.bounds.width/2
         leftButton.layer.cornerRadius = leftButton.bounds.width/2
         rightButton.layer.cornerRadius = rightButton.bounds.width/2
-
+        
     }
     private func getLabelByPosition(_ position: Int) -> UILabel? {
         view.viewWithTag(position) as? UILabel
@@ -53,8 +81,8 @@ class GameViewController: UIViewController {
         getLabelByPosition(positionSpider)?.text = "🕸"
         positionSpider += getPosition
         if positionWorm == positionSpider {
-            k += 1
-            label0.text = "\(k)"
+            resultScore += 1
+            label0.text = "\(resultScore)"
             while positionWorm == positionSpider {
                 positionWorm = Int.random(in: 1...9)
                 getLabelByPosition(positionWorm)?.text = "🐛"
@@ -84,4 +112,3 @@ class GameViewController: UIViewController {
         buttonAction(1)
     }
 }
-
