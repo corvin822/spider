@@ -186,18 +186,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cup1View" destination="j1c-oc-qhO" id="yCo-ZO-Vhv"/>
-                        <outlet property="cup2View" destination="omu-QI-WJr" id="fIf-ds-y3g"/>
-                        <outlet property="cup3View" destination="zeq-eN-Fdy" id="OOk-In-aGh"/>
                         <outlet property="cupImage" destination="llN-W8-RWn" id="ZTj-C2-6HR"/>
                         <outlet property="icecreamImage" destination="l5Z-Hd-rOA" id="19p-RW-9Ac"/>
                         <outlet property="labelCongratulation" destination="DYI-Tg-Tjg" id="ooo-nV-Ogi"/>
                         <outlet property="labelPlace" destination="2jz-EF-9A7" id="dbS-KQ-jLo"/>
                         <outlet property="labelSorry" destination="lpW-w0-NQx" id="MK0-lQ-pJB"/>
                         <outlet property="podiumImage" destination="Pgt-6U-NaM" id="WXc-pa-rZK"/>
-                        <outlet property="result1" destination="tKc-Bj-dqv" id="ULw-zk-U69"/>
-                        <outlet property="result2" destination="0Zs-VQ-Scs" id="blK-Rf-OSg"/>
-                        <outlet property="result3" destination="cRm-YC-Zx5" id="IZa-Bn-eaS"/>
+                        <outletCollection property="resultLabels" destination="tKc-Bj-dqv" collectionClass="NSMutableArray" id="pLu-pu-uE9"/>
+                        <outletCollection property="resultLabels" destination="0Zs-VQ-Scs" collectionClass="NSMutableArray" id="w0n-b3-tbg"/>
+                        <outletCollection property="resultLabels" destination="cRm-YC-Zx5" collectionClass="NSMutableArray" id="H3N-ss-em2"/>
+                        <outletCollection property="cupViews" destination="j1c-oc-qhO" collectionClass="NSMutableArray" id="DHH-yV-gYD"/>
+                        <outletCollection property="cupViews" destination="omu-QI-WJr" collectionClass="NSMutableArray" id="mZm-GF-v3W"/>
+                        <outletCollection property="cupViews" destination="zeq-eN-Fdy" collectionClass="NSMutableArray" id="WV9-Yc-ER9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

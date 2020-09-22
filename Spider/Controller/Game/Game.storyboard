@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,15 +13,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="Spider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVF-Dh-xEJ">
-                                <rect key="frame" x="100" y="57" width="175" height="48"/>
+                                <rect key="frame" x="100" y="101" width="214" height="48"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-v3-NX0">
-                                        <rect key="frame" x="160" y="0.0" width="15" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yh-v3-NX0">
+                                        <rect key="frame" x="205" y="0.0" width="9" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -33,26 +34,34 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alarum" translatesAutoresizingMaskIntoConstraints="NO" id="j6d-Pz-YQY">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="48"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-Gn-KEE">
+                                        <rect key="frame" x="152" y="5" width="36" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="6yh-v3-NX0" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="top" id="09o-MN-Vzs"/>
-                                    <constraint firstItem="6yh-v3-NX0" firstAttribute="trailing" secondItem="uAM-UB-J9j" secondAttribute="trailing" constant="128" id="3Wl-fa-yu7"/>
                                     <constraint firstItem="uAM-UB-J9j" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="76n-de-6IZ"/>
                                     <constraint firstItem="j6d-Pz-YQY" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="top" id="Cvy-AU-ZLl"/>
+                                    <constraint firstItem="6yh-v3-NX0" firstAttribute="trailing" secondItem="fnH-Gn-KEE" secondAttribute="trailing" constant="26" id="ESd-I9-jLE"/>
                                     <constraint firstItem="6yh-v3-NX0" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="FJr-A3-Hp1"/>
                                     <constraint firstItem="uAM-UB-J9j" firstAttribute="leading" secondItem="RVF-Dh-xEJ" secondAttribute="leading" id="Fkq-Wl-nyT"/>
                                     <constraint firstAttribute="height" constant="48" id="HuE-aj-Ugf"/>
                                     <constraint firstItem="j6d-Pz-YQY" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="VAp-tW-iaO"/>
                                     <constraint firstAttribute="trailing" secondItem="6yh-v3-NX0" secondAttribute="trailing" id="WJT-CD-mNA"/>
+                                    <constraint firstItem="uAM-UB-J9j" firstAttribute="centerX" secondItem="j6d-Pz-YQY" secondAttribute="centerX" id="ojT-Jt-BzZ"/>
                                     <constraint firstItem="j6d-Pz-YQY" firstAttribute="leading" secondItem="RVF-Dh-xEJ" secondAttribute="leading" id="tEk-uk-LYR"/>
+                                    <constraint firstItem="fnH-Gn-KEE" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="vS0-o1-AAw"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-cz-LGX">
-                                <rect key="frame" x="64" y="105" width="247" height="377.5"/>
+                                <rect key="frame" x="83.5" y="149" width="247" height="509"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CvF-OT-bNz">
-                                        <rect key="frame" x="0.0" y="54" width="247" height="269.5"/>
+                                        <rect key="frame" x="0.0" y="120" width="247" height="269.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vso-Cp-f3E">
                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="269.5"/>
@@ -138,82 +147,65 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-Nc-PbP">
-                                <rect key="frame" x="107" y="482.5" width="161" height="160.5"/>
+                                <rect key="frame" x="120.5" y="658" width="173.5" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Ta-Fd-oxN">
-                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="160.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="180"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJd-tm-f1E">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewj-P6-cno">
-                                                <rect key="frame" x="0.0" y="53.5" width="53.5" height="53.5"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Left">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="leftButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqx-Sh-G5M"/>
-                                                </connections>
-                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q99-Yc-Qua">
+                                                <rect key="frame" x="0.0" y="62.5" width="56.5" height="55.5"/>
+                                                <color key="tintColor" name="kukaszArrow"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-Xn-yfr">
-                                                <rect key="frame" x="0.0" y="107" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="120" width="56.5" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kul-8u-SJK">
-                                        <rect key="frame" x="53.5" y="0.0" width="54" height="160.5"/>
+                                        <rect key="frame" x="56.5" y="0.0" width="60" height="180"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQM-u0-QD5">
-                                                <rect key="frame" x="0.0" y="0.0" width="54" height="53.5"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oT7-ke-itN">
+                                                <rect key="frame" x="0.0" y="2" width="60" height="56"/>
+                                                <color key="tintColor" name="kukaszArrow"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="VQM-u0-QD5" secondAttribute="height" id="Ouq-ek-A5Q"/>
+                                                    <constraint firstAttribute="width" secondItem="oT7-ke-itN" secondAttribute="height" multiplier="1:1" id="Lvo-My-YT0"/>
                                                 </constraints>
-                                                <state key="normal" title="Up">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="upButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDc-40-b4j"/>
-                                                </connections>
-                                            </button>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqE-du-9YS">
-                                                <rect key="frame" x="0.0" y="53.5" width="54" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="60" width="60" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-DK-NKg">
-                                                <rect key="frame" x="0.0" y="107" width="54" height="53.5"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Down">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="downButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CCY-Rz-kxV"/>
-                                                </connections>
-                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-pO-QY9">
+                                                <rect key="frame" x="0.0" y="122" width="60" height="56"/>
+                                                <color key="tintColor" name="kukaszArrow"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                            </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8Wb-pO-QY9" firstAttribute="width" secondItem="oT7-ke-itN" secondAttribute="width" id="0N5-Tn-Bx4"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gFo-jd-wgX">
-                                        <rect key="frame" x="107.5" y="0.0" width="53.5" height="160.5"/>
+                                        <rect key="frame" x="116.5" y="0.0" width="57" height="180"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHx-al-KiJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHu-Rv-3gd">
-                                                <rect key="frame" x="0.0" y="53.5" width="53.5" height="53.5"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Right">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="rightButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sp-jG-QkS"/>
-                                                </connections>
-                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowtriangle.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-Mc-s98">
+                                                <rect key="frame" x="0.0" y="62.5" width="57" height="55.5"/>
+                                                <color key="tintColor" name="kukaszArrow"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R8-py-Jmv">
-                                                <rect key="frame" x="0.0" y="107" width="53.5" height="53.5"/>
+                                                <rect key="frame" x="0.0" y="120" width="57" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             </view>
                                         </subviews>
@@ -221,38 +213,40 @@
                                 </subviews>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <constraints>
-                                    <constraint firstItem="VQM-u0-QD5" firstAttribute="width" secondItem="Ewj-P6-cno" secondAttribute="width" id="1vy-N3-g2a"/>
-                                    <constraint firstItem="VQM-u0-QD5" firstAttribute="width" secondItem="FHu-Rv-3gd" secondAttribute="width" id="g5B-gq-2wc"/>
+                                    <constraint firstItem="iPx-Mc-s98" firstAttribute="width" secondItem="oT7-ke-itN" secondAttribute="width" multiplier="0.95" id="NQh-r9-HAf"/>
+                                    <constraint firstItem="q99-Yc-Qua" firstAttribute="width" secondItem="oT7-ke-itN" secondAttribute="width" multiplier="0.941667" id="XL7-7s-iNA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RVF-Dh-xEJ" secondAttribute="trailing" constant="100" id="004-Fd-SzE"/>
                             <constraint firstItem="cCi-Nc-PbP" firstAttribute="top" secondItem="DjV-cz-LGX" secondAttribute="bottom" id="23r-mU-Q2N"/>
                             <constraint firstItem="RVF-Dh-xEJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="7WJ-2q-sud"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cCi-Nc-PbP" secondAttribute="bottom" constant="24" id="AWR-Vx-vF5"/>
+                            <constraint firstItem="oT7-ke-itN" firstAttribute="width" secondItem="DjV-cz-LGX" secondAttribute="width" multiplier="0.242915" id="Ght-EU-AkU"/>
                             <constraint firstItem="DjV-cz-LGX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R2X-NH-G3X"/>
                             <constraint firstItem="RVF-Dh-xEJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Xx5-BR-GDP"/>
                             <constraint firstItem="cCi-Nc-PbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bvl-n6-F8A"/>
-                            <constraint firstItem="VQM-u0-QD5" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:7" id="c5Y-OO-2zE"/>
                             <constraint firstItem="DjV-cz-LGX" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="bottom" id="l5K-bO-dmW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="downButton" destination="uwW-DK-NKg" id="w4v-P3-Oek"/>
-                        <outlet property="label0" destination="6yh-v3-NX0" id="LAc-Gp-82J"/>
+                        <outlet property="imageArrowDown" destination="8Wb-pO-QY9" id="G87-bK-0qz"/>
+                        <outlet property="imageArrowLeft" destination="q99-Yc-Qua" id="oh9-i8-ZKz"/>
+                        <outlet property="imageArrowRight" destination="iPx-Mc-s98" id="uEF-EJ-bga"/>
+                        <outlet property="imageArrowUp" destination="oT7-ke-itN" id="ehc-FV-8iN"/>
+                        <outlet property="labelResultScore" destination="6yh-v3-NX0" id="LAc-Gp-82J"/>
+                        <outlet property="labelSelectedPlayerIcon" destination="fnH-Gn-KEE" id="nR6-pR-rpe"/>
                         <outlet property="labelTimer" destination="uAM-UB-J9j" id="UnY-at-jmJ"/>
-                        <outlet property="leftButton" destination="Ewj-P6-cno" id="kmf-S9-kQZ"/>
-                        <outlet property="rightButton" destination="FHu-Rv-3gd" id="6Ie-Mf-1Yx"/>
-                        <outlet property="upButton" destination="VQM-u0-QD5" id="Tkj-Jc-fet"/>
                         <segue destination="JgY-8G-n3R" kind="show" identifier="result" id="dju-w2-wV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="120"/>
+            <point key="canvasLocation" x="166.66666666666669" y="119.86607142857142"/>
         </scene>
         <!--Result-->
         <scene sceneID="54Z-nh-Of7">
@@ -267,5 +261,12 @@
     </scenes>
     <resources>
         <image name="alarum" width="47" height="50"/>
+        <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
+        <image name="arrowtriangle.left.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.up.fill" catalog="system" width="128" height="124"/>
+        <namedColor name="kukaszArrow">
+            <color red="0.40000000000000002" green="0.47450980392156861" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

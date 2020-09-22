@@ -18,96 +18,110 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var labelCongratulation: UILabel!
     @IBOutlet weak var labelPlace: UILabel!
     
-    //TODO: rev-ALi: ezeket be lehet rakni IBOutlet collection-be, sokkal egyszerűbb lesz a kezelés, majd megmutatom, szólj
-    @IBOutlet weak var result1: UILabel!
-    @IBOutlet weak var result2: UILabel!
-    @IBOutlet weak var result3: UILabel!
+    @IBOutlet var resultLabels: [UILabel]!
+    @IBOutlet var cupViews: [UIView]!
     
-    //TODO: rev-ALi: ezeket be lehet rakni IBOutlet collection-be, sokkal egyszerűbb lesz a kezelés, majd megmutatom, szólj
-    @IBOutlet weak var cup1View: UIView!
-    @IBOutlet weak var cup2View: UIView!
-    @IBOutlet weak var cup3View: UIView!
-    
-    class Args {
-        //TODO: rev-ALi: itt miért használunk többesszámot?
-        //TODO: rev-ALi: az eredmények típusára már bevezettük a Score-t
-        var results: Int = 0
-        var resultType: ResultType = .result30
+    class Arg {
+        var results: Score = 0
+        var gameType: GameType = .result30
+        var selectedPlayer: PlayerType = .dog
     }
     
-    //TODO: rev-ALi: sorrendben érdemes előre rendezni a publikus property-ket, majd utánuk egy üres sort követően a private property-ket
-    private var place: ResultCalculator.Ranking = .none
-    var args: Args = .init()
+    var args: Arg = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.hidesBackButton = true
         title = "Eredményhirdetés"
-        //TODO: rev-ALi: a helyezés megállapítását kiraknám egy private függvénybe
+        screenData(rankingCalculator())
+    }
+    
+    private func rankingCalculator() -> Ranking {
         let resultCalculator = ResultCalculator()
-        place = resultCalculator.recordResult(args.results, resultType: args.resultType)
-        screenData(place)
+        return resultCalculator.recordResult(
+            GameResult(score: args.results, playerType: args.selectedPlayer),
+            gameType: args.gameType)
     }
     
     @IBAction func backToResultsListButton(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    //TODO: rev-ALi: ez a függvény kivülről is hívható?
-    func screenData(_ place: ResultCalculator.Ranking){
-        podiumImage.image = args.resultType.imagePodium
-        switch place {
-        case .first:
-            //TODO: rev-ALi: ezt kiraknám egy showAwardImage(ResultType) metódusba és akkor a switch sem kell
-            cupImage.isHidden = false
-            cupImage.image = args.resultType.imageCup
-            icecreamImage.isHidden = true
-            
-            //TODO: rev-ALi: ezt kiraknám egy showResultTexts(ResultType) metódusba és akkor a switch sem kell
-            labelCongratulation.text = "GRATULÁLUNK!"
-            labelSorry.text = ""
-            labelPlace.text = "Első helyezett lettél"
-            
-            //TODO: rev-ALi: ezt kiraknám egy showResultOnPodium(ResultType) metódusba és akkor a switch sem kell
-            cup1View.isHidden = false
-            cup2View.isHidden = true
-            cup3View.isHidden = true
-            result1.text = "\(args.results)"
-        case .second:
-            cupImage.isHidden = false
-            cupImage.image = args.resultType.medal2
-            icecreamImage.isHidden = true
-            labelCongratulation.text = "GRATULÁLUNK!"
-            labelSorry.text = ""
-            labelPlace.text = "Második helyezett lettél"
-            cup1View.isHidden = true
-            cup2View.isHidden = false
-            cup3View.isHidden = true
-            result2.text = "\(args.results)"
-        case .third:
-            cupImage.isHidden = false
-            cupImage.image = args.resultType.medal3
-            icecreamImage.isHidden = true
-            labelCongratulation.text = "GRATULÁLUNK!"
-            labelSorry.text = ""
-            labelPlace.text = "Harmadik helyezett lettél"
-            cup1View.isHidden = true
-            cup2View.isHidden = true
-            cup3View.isHidden = false
-            result3.text = "\(args.results)"
-        case .none:
-            icecreamImage.isHidden = false
-            //TODO: rev-ALi: erre az image betöltésre biztosan szükség van?
-            icecreamImage.image = UIImage(named: "icecream")!
-            cupImage.isHidden = true
-            labelCongratulation.text = ""
+    private func showAwardImage(_ gameType: GameType, _ place: Ranking) {
+        cupImage.isHidden = place == .none
+        icecreamImage.isHidden = place != .none
+        cupImage.image = place.rewardImage(gameType)
+    }
+    
+    private func showResultTexts(_ gameType: GameType, _ place: Ranking) {
+        labelSorry.text = ""
+        labelCongratulation.text = "GRATULÁLUNK!"
+        labelPlace.text = place.resultText()
+        if place == .none {
             labelSorry.text = "Sajnos ez most nem sikerült"
+            labelCongratulation.text = ""
             labelPlace.text = "Egyél egy jégkrémet!"
-            cup1View.isHidden = true
-            cup2View.isHidden = true
-            cup3View.isHidden = true
         }
+    }
+    
+    private func showResultOnPodium(_ place: Ranking) {
+        var index = 0
+        while 3 > index {
+            cupViews[index].isHidden = true
+            index += 1
+        }
+        if place != .none {
+            cupViews[place.rawValue].isHidden = false
+            resultLabels[place.rawValue].text = "\(args.results)"
+        }
+    }
+    
+    private func screenData(_ place: Ranking){
+        podiumImage.image = args.gameType.imagePodium
+        showAwardImage(args.gameType, place)
+        showResultTexts(args.gameType, place)
+        showResultOnPodium(place)
     }
 }
 
+extension Ranking {
+    
+    var medalColorName: String {
+        switch self {
+        case .first, .none:
+            return ""
+        case .second:
+            return "silver"
+        case .third:
+            return "bronze"
+        }
+    }
+    
+    var placeText: String {
+        switch self {
+        case .first:
+            return "Első"
+        case .second:
+            return "Második"
+        case .third:
+            return "Harmadik"
+        case .none:
+            return ""
+        }
+    }
+    
+    func rewardImage(_ gameType: GameType) -> UIImage? {
+        guard self != .none else { return nil }
+        
+        if self == .first {
+            return UIImage(named: "cup\(gameType.gameLenght)")
+        }
+        
+        return UIImage(named: "medal\(gameType.gameLenght)\(self.medalColorName)")
+    }
+    
+    func resultText() -> String {
+        return "\(self.placeText) helyezett lettél"
+    }
+}

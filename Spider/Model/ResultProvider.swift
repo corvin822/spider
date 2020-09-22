@@ -8,50 +8,40 @@
 
 import Foundation
 
-//TODO: rev-ALi: Jobb elnevezés lenne a GameType
-enum ResultType {
-    case result30
-    case result45
-    case result60
-}
-
-typealias Score = Int
-
 class ResultProvider {
     
     let storage = UserDefaults.standard
+    let storagePlayer = UserDefaults.standard
     
-    //TODO: rev-ALi: a típus átnevezés miatt itt jobb lenne a következő elnevezés:
-    // func clearResults(of gameType: GameType)
-    func clear(resultType: ResultType) {
-        storage.removeObject(forKey: resultType.storageKey)
+    func clearResults(of gameType: GameType) {
+        storage.removeObject(forKey: gameType.storageKey)
         storage.synchronize()
     }
     
-    //TODO: rev-ALi: átnevezés resultType -> gameType
-    func getResults(for resultType: ResultType) -> [Score] {
-        guard let results = storage.value(forKey: resultType.storageKey) as? [Score] else {
+    func getResults(for gameType: GameType) -> [GameResult] {
+        guard let data = storage.object(forKey: gameType.storageKey) as? Data else {
             return []
         }
-        return results
+        
+        let decodedGameType = try? PropertyListDecoder().decode([GameResult].self, from: data)
+        return decodedGameType ?? []
     }
     
-    //TODO: rev-ALi: átnevezés resultType -> gameType
-    func save(results: [Score], of resultType: ResultType) {
-        storage.set(Array(results.prefix(3)), forKey: resultType.storageKey)
+    func save(results: [GameResult], of gameType: GameType) {
+        storage.set(try? PropertyListEncoder().encode(results), forKey: gameType.storageKey)
         storage.synchronize()
     }
 }
 
-extension ResultType {
+private extension GameType {
     var storageKey: String {
         switch self {
         case .result30:
-            return "result30"
+            return "result_30"
         case .result45:
-            return "result45"
+            return "result_45"
         case .result60:
-            return "result60"
+            return "result_60"
         }
     }
 }

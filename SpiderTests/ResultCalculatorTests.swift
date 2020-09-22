@@ -23,8 +23,8 @@ class ResultCalculatorTests: XCTestCase {
     }
 
     func testAddNewResultOnEmptyResultSetWorks() {
-        resultProvider.clear(resultType: .result30)
-        let ranking = resultCalulator.recordResult(5, resultType: .result30)
+        resultProvider.clearResults(of: .result30)
+        let ranking = resultCalulator.recordResult(5, gameType: .result30)
         
         XCTAssertEqual(ranking, ResultCalculator.Ranking.first)
         XCTAssertEqual([5], resultProvider.getResults(for: .result30))
@@ -32,7 +32,7 @@ class ResultCalculatorTests: XCTestCase {
     
     func testAddNewResultOnNotEmptyResultSetWorks() {
         resultProvider.save(results: [12,5], of: .result30)
-        let ranking = resultCalulator.recordResult(7, resultType: .result30)
+        let ranking = resultCalulator.recordResult(7, gameType: .result30)
         
         XCTAssertEqual(ranking, ResultCalculator.Ranking.second)
         XCTAssertEqual([12, 7, 5], resultProvider.getResults(for: .result30))
@@ -40,7 +40,7 @@ class ResultCalculatorTests: XCTestCase {
     
     func testAddNewResultOnNotEmptyResultSet2Works() {
         resultProvider.save(results: [12,5,3], of: .result30)
-        let ranking = resultCalulator.recordResult(4, resultType: .result30)
+        let ranking = resultCalulator.recordResult(4, gameType: .result30)
         
         XCTAssertEqual(ranking, ResultCalculator.Ranking.third)
         XCTAssertEqual([12, 5, 4], resultProvider.getResults(for: .result30))
@@ -48,7 +48,7 @@ class ResultCalculatorTests: XCTestCase {
     
     func testAddNewResultOnNotEmptyResultSet3Works() {
         resultProvider.save(results: [12,5,4], of: .result30)
-        let ranking = resultCalulator.recordResult(2, resultType: .result30)
+        let ranking = resultCalulator.recordResult(2, gameType: .result30)
         
         XCTAssertEqual(ranking, ResultCalculator.Ranking.none)
         XCTAssertEqual([12, 5, 4], resultProvider.getResults(for: .result30))
@@ -56,7 +56,7 @@ class ResultCalculatorTests: XCTestCase {
     
     func testAddNewResultOnNotEmptyResultSet4Works() {
         resultProvider.save(results: [12,5,4], of: .result30)
-        let ranking = resultCalulator.recordResult(14, resultType: .result30)
+        let ranking = resultCalulator.recordResult(14, gameType: .result30)
         
         XCTAssertEqual(ranking, ResultCalculator.Ranking.first)
         XCTAssertEqual([14, 12, 5], resultProvider.getResults(for: .result30))

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Player View Controller-->
+        <scene sceneID="yXV-wF-Ie8">
+            <objects>
+                <viewController storyboardIdentifier="SelectPlayerViewController" id="aDV-CF-mbx" customClass="SelectPlayerViewController" customModule="Spider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G85-zW-Fuf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGz-xp-oYd">
+                                <rect key="frame" x="90" y="231.5" width="195" height="204"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oos-Ru-1eV">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnc-Ch-q45">
+                                                <rect key="frame" x="-2.5" y="-2.5" width="69" height="89"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                <state key="normal" title="🐶"/>
+                                                <connections>
+                                                    <segue destination="fkC-St-sq2" kind="show" identifier="dog" id="pIg-JG-Z3P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Dnc-Ch-q45" firstAttribute="centerY" secondItem="oos-Ru-1eV" secondAttribute="centerY" id="2v2-Zm-Pca"/>
+                                            <constraint firstAttribute="width" constant="64" id="JkZ-bo-3z7"/>
+                                            <constraint firstAttribute="height" constant="84" id="aFS-1m-Qaj"/>
+                                            <constraint firstItem="Dnc-Ch-q45" firstAttribute="centerX" secondItem="oos-Ru-1eV" secondAttribute="centerX" id="egW-lS-13W"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4S-mT-7BJ">
+                                        <rect key="frame" x="131" y="0.0" width="64" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVN-kA-A7I">
+                                                <rect key="frame" x="-2.5" y="-2.5" width="69" height="89"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                <state key="normal" title="🦊"/>
+                                                <connections>
+                                                    <segue destination="fkC-St-sq2" kind="show" identifier="fox" id="Abn-io-V5c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="J7t-hy-rSR"/>
+                                            <constraint firstItem="SVN-kA-A7I" firstAttribute="centerX" secondItem="q4S-mT-7BJ" secondAttribute="centerX" id="hOa-yT-S69"/>
+                                            <constraint firstItem="SVN-kA-A7I" firstAttribute="centerY" secondItem="q4S-mT-7BJ" secondAttribute="centerY" id="mhr-9w-vwe"/>
+                                            <constraint firstAttribute="height" constant="84" id="rt6-B7-GK2"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Zp-P9-BXQ">
+                                        <rect key="frame" x="0.0" y="120" width="64" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfs-ED-Jck">
+                                                <rect key="frame" x="-2.5" y="-2.5" width="69" height="89"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                <state key="normal" title="🦁"/>
+                                                <connections>
+                                                    <segue destination="fkC-St-sq2" kind="show" identifier="lion" id="a1R-sa-De8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="RtC-Ur-vm6"/>
+                                            <constraint firstItem="mfs-ED-Jck" firstAttribute="centerX" secondItem="8Zp-P9-BXQ" secondAttribute="centerX" id="f5e-0a-TBm"/>
+                                            <constraint firstItem="mfs-ED-Jck" firstAttribute="centerY" secondItem="8Zp-P9-BXQ" secondAttribute="centerY" id="wz5-s8-hHC"/>
+                                            <constraint firstAttribute="height" constant="84" id="yc8-KZ-lSX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tYn-gH-VOP">
+                                        <rect key="frame" x="131" y="120" width="64" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4g-Lg-jjt">
+                                                <rect key="frame" x="-2.5" y="-2.5" width="69" height="89"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                <state key="normal" title="🐱"/>
+                                                <connections>
+                                                    <segue destination="fkC-St-sq2" kind="show" identifier="cat" id="ReX-Vs-5Rt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="DuK-jU-gjT"/>
+                                            <constraint firstItem="O4g-Lg-jjt" firstAttribute="centerY" secondItem="tYn-gH-VOP" secondAttribute="centerY" id="OQ5-yt-SqX"/>
+                                            <constraint firstAttribute="height" constant="84" id="WHD-jB-9PY"/>
+                                            <constraint firstItem="O4g-Lg-jjt" firstAttribute="centerX" secondItem="tYn-gH-VOP" secondAttribute="centerX" id="XaW-Mw-CQe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="3dw-X9-QZm"/>
+                                    <constraint firstItem="oos-Ru-1eV" firstAttribute="leading" secondItem="IGz-xp-oYd" secondAttribute="leading" id="Gzp-k3-0Zu"/>
+                                    <constraint firstAttribute="bottom" secondItem="tYn-gH-VOP" secondAttribute="bottom" id="Jpd-07-VWg"/>
+                                    <constraint firstAttribute="trailing" secondItem="q4S-mT-7BJ" secondAttribute="trailing" id="iAM-Tu-hOp"/>
+                                    <constraint firstItem="q4S-mT-7BJ" firstAttribute="top" secondItem="IGz-xp-oYd" secondAttribute="top" id="onm-qI-1Wm"/>
+                                    <constraint firstItem="8Zp-P9-BXQ" firstAttribute="leading" secondItem="IGz-xp-oYd" secondAttribute="leading" id="qbS-fE-kOj"/>
+                                    <constraint firstItem="oos-Ru-1eV" firstAttribute="top" secondItem="IGz-xp-oYd" secondAttribute="top" id="shF-fh-LlS"/>
+                                    <constraint firstAttribute="trailing" secondItem="tYn-gH-VOP" secondAttribute="trailing" id="t7C-XS-2xU"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Zp-P9-BXQ" secondAttribute="bottom" id="uD4-yL-Jc9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Válassz egy játékost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTo-A2-OJ0">
+                                <rect key="frame" x="83" y="61" width="209" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWg-cF-pZe">
+                                <rect key="frame" x="153" y="289" width="69" height="89"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <state key="normal" title="🕷"/>
+                                <connections>
+                                    <segue destination="fkC-St-sq2" kind="show" identifier="spider" id="BZz-fa-10P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mWg-cF-pZe" firstAttribute="centerY" secondItem="G85-zW-Fuf" secondAttribute="centerY" id="7v4-9R-206"/>
+                            <constraint firstItem="mWg-cF-pZe" firstAttribute="centerX" secondItem="G85-zW-Fuf" secondAttribute="centerX" id="FvR-uu-voP"/>
+                            <constraint firstItem="IGz-xp-oYd" firstAttribute="leading" secondItem="G85-zW-Fuf" secondAttribute="leading" constant="90" id="JN8-Hg-5mU"/>
+                            <constraint firstItem="cTo-A2-OJ0" firstAttribute="centerX" secondItem="G85-zW-Fuf" secondAttribute="centerX" id="PhK-pt-Q4m"/>
+                            <constraint firstItem="D3J-pK-dW9" firstAttribute="trailing" secondItem="IGz-xp-oYd" secondAttribute="trailing" constant="90" id="Yz0-bz-UgR"/>
+                            <constraint firstItem="cTo-A2-OJ0" firstAttribute="top" secondItem="D3J-pK-dW9" secondAttribute="top" constant="61" id="fwI-f0-D59"/>
+                            <constraint firstItem="IGz-xp-oYd" firstAttribute="centerY" secondItem="G85-zW-Fuf" secondAttribute="centerY" id="o2g-z9-xsd"/>
+                            <constraint firstItem="IGz-xp-oYd" firstAttribute="centerX" secondItem="G85-zW-Fuf" secondAttribute="centerX" id="qBN-mh-O2O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D3J-pK-dW9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4p4-mz-0mm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="122"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="8fC-nM-0WI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Game" id="fkC-St-sq2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kdl-CP-9Vf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSP-qd-v9t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="121"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BZz-fa-10P"/>
+    </inferredMetricsTieBreakers>
+</document>

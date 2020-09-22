@@ -9,27 +9,19 @@
 import Foundation
 
 class ResultCalculator {
-
-    enum Ranking: Int {
-        case first = 0
-        case second = 1
-        case third = 2
-        case none = 3
-    }
     
     private let resultProvider = ResultProvider()
     
-    //TODO: rev-ALi: átnevezés resultType -> gameType
-    func recordResult(_ score: Score, resultType: ResultType) -> Ranking {
-        var results = resultProvider.getResults(for: resultType)
+    func recordResult(_ gameResult: GameResult, gameType: GameType) -> Ranking {
+        var results = resultProvider.getResults(for: gameType)
         var index = 0
-        while results.count > index, results[index] > score {
+        while results.count > index, results[index].score > gameResult.score {
             index += 1
         }
         
         if index <= 2 {
-            results.insert(score, at: index)
-            resultProvider.save(results: results, of: resultType)
+            results.insert(gameResult, at: index)
+            resultProvider.save(results: results, of: gameType)
         }
         
         if let retVal = Ranking(rawValue: index) {

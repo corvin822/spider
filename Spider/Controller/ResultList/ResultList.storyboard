@@ -116,15 +116,15 @@
             </objects>
             <point key="canvasLocation" x="-602" y="-110"/>
         </scene>
-        <!--Game-->
-        <scene sceneID="P8L-5x-blG">
+        <!--SelectPlayerViewController-->
+        <scene sceneID="XM5-JT-aIZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Game" id="XV4-nc-qTH" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="b57-l7-Yf9"/>
+                <viewControllerPlaceholder storyboardIdentifier="SelectPlayerViewController" storyboardName="SelectPlayer" referencedIdentifier="SelectPlayerViewController" id="jGZ-7v-ALv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="h2x-cG-ed6"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cWM-sF-5Cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2eH-nk-7IW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="222" y="177"/>
+            <point key="canvasLocation" x="221" y="134"/>
         </scene>
         <!--Result Podium View Controller-->
         <scene sceneID="EEb-ja-vu6">
@@ -156,7 +156,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="XV4-nc-qTH" kind="show" identifier="startGameAgain" id="zHK-kL-0mM"/>
+                                    <segue destination="jGZ-7v-ALv" kind="show" identifier="selectPlayer" id="dwq-f0-Kf5"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-5t-KSy" userLabel="cup2">
@@ -237,6 +237,27 @@
                                     <constraint firstItem="vUs-xV-pCG" firstAttribute="top" secondItem="811-w7-k8K" secondAttribute="top" constant="5" id="wyu-VM-SFp"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🦊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dpz-U3-aow">
+                                <rect key="frame" x="188" y="33" width="27" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🦁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrx-JB-yoH">
+                                <rect key="frame" x="150" y="-1" width="27" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🐶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdl-BS-JjA">
+                                <rect key="frame" x="107" y="21" width="27" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -262,6 +283,9 @@
                         <outlet property="cup2ResultLabel" destination="wqG-LD-beN" id="QQf-ch-Uee"/>
                         <outlet property="cup3HolderView" destination="811-w7-k8K" id="xUZ-r7-9xf"/>
                         <outlet property="cup3ResultLabel" destination="vUs-xV-pCG" id="lck-2l-6HZ"/>
+                        <outlet property="labelFirstPlayer" destination="Hrx-JB-yoH" id="kBf-Wf-3Oo"/>
+                        <outlet property="labelSecondPlayer" destination="Vdl-BS-JjA" id="Sqx-ON-OSe"/>
+                        <outlet property="labelThirdPlayer" destination="Dpz-U3-aow" id="tEx-Os-cSf"/>
                         <outlet property="podiumImageView" destination="E5s-uf-aSR" id="v8X-Lw-XGC"/>
                     </connections>
                 </viewController>

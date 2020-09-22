@@ -9,25 +9,20 @@
 import UIKit
 
 class ResultListViewController: UIViewController {
-    
-    //TODO: rev-ALi: elég egy üres sort kihagyni tagolásként
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "first", let containerViewController = segue.destination as? ResultPodiumViewController {
-            containerViewController.args.resultType = .result30
+            containerViewController.args.gameType = .result30
         }
         if segue.identifier == "second", let containerViewController = segue.destination as? ResultPodiumViewController {
-            containerViewController.args.resultType = .result45
+            containerViewController.args.gameType = .result45
         }
         if segue.identifier == "third", let containerViewController = segue.destination as? ResultPodiumViewController {
-            containerViewController.args.resultType = .result60
-        }
-        if segue.identifier == "startGameAgain", let gameViewController = segue.destination as? GameViewController, let resultType = sender as? ResultType {
-            gameViewController.args.resultType = resultType
+            containerViewController.args.gameType = .result60
         }
     }
 }

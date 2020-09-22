@@ -22,14 +22,14 @@ class ResultProviderTests: XCTestCase {
     }
 
     func testClearResultsWorks() {
-        resultProvider.clear(resultType: .result30)
+        resultProvider.clearResults(of gameType: .result30)
         let result = resultProvider.getResults(for: .result30)
         
         XCTAssertEqual(result, [])
     }
     
     func testSaveResultOnEmptyProviderWorks() {
-        resultProvider.clear(resultType: .result30)
+        resultProvider.clearResults(of gameType: .result30)
         resultProvider.save(results: [5], of: .result30)
         
         let result = resultProvider.getResults(for: .result30)
@@ -38,7 +38,7 @@ class ResultProviderTests: XCTestCase {
     }
     
     func testSaveAdditionalResultWorks() {
-        resultProvider.clear(resultType: .result30)
+        resultProvider.clearResults(of gameType: .result30)
         resultProvider.save(results: [5], of: .result30)
         var results = resultProvider.getResults(for: .result30)
         results.insert(7, at: 0)
