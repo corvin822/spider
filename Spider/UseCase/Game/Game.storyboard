@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,7 +43,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="6yh-v3-NX0" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="top" id="09o-MN-Vzs"/>
                                     <constraint firstItem="uAM-UB-J9j" firstAttribute="centerY" secondItem="RVF-Dh-xEJ" secondAttribute="centerY" id="76n-de-6IZ"/>
@@ -139,7 +141,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="CvF-OT-bNz" secondAttribute="trailing" id="O2b-hf-d6Y"/>
                                     <constraint firstItem="CvF-OT-bNz" firstAttribute="centerY" secondItem="DjV-cz-LGX" secondAttribute="centerY" id="QzM-u2-rQI"/>
@@ -154,38 +156,50 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJd-tm-f1E">
                                                 <rect key="frame" x="0.0" y="0.0" width="56.5" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q99-Yc-Qua">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.left.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q99-Yc-Qua">
                                                 <rect key="frame" x="0.0" y="62.5" width="56.5" height="55.5"/>
                                                 <color key="tintColor" name="kukaszArrow"/>
+                                                <gestureRecognizers/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="5uj-fn-WEU" appends="YES" id="b7d-dr-22t"/>
+                                                </connections>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPN-Xn-yfr">
                                                 <rect key="frame" x="0.0" y="120" width="56.5" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kul-8u-SJK">
                                         <rect key="frame" x="56.5" y="0.0" width="60" height="180"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oT7-ke-itN">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oT7-ke-itN">
                                                 <rect key="frame" x="0.0" y="2" width="60" height="56"/>
                                                 <color key="tintColor" name="kukaszArrow"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="oT7-ke-itN" secondAttribute="height" multiplier="1:1" id="Lvo-My-YT0"/>
                                                 </constraints>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="owx-fr-KAg" appends="YES" id="mpv-eb-LqQ"/>
+                                                </connections>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqE-du-9YS">
                                                 <rect key="frame" x="0.0" y="60" width="60" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-pO-QY9">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Wb-pO-QY9">
                                                 <rect key="frame" x="0.0" y="122" width="60" height="56"/>
                                                 <color key="tintColor" name="kukaszArrow"/>
+                                                <gestureRecognizers/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="qVI-Za-c9F" appends="YES" id="YUe-UK-5jg"/>
+                                                </connections>
                                             </imageView>
                                         </subviews>
                                         <constraints>
@@ -197,16 +211,20 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHx-al-KiJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="arrowtriangle.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-Mc-s98">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="arrowtriangle.right.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iPx-Mc-s98">
                                                 <rect key="frame" x="0.0" y="62.5" width="57" height="55.5"/>
                                                 <color key="tintColor" name="kukaszArrow"/>
+                                                <gestureRecognizers/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="MjG-vx-Bc4" appends="YES" id="wmD-wV-Ks3"/>
+                                                </connections>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6R8-py-Jmv">
                                                 <rect key="frame" x="0.0" y="120" width="57" height="60"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -218,7 +236,8 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RVF-Dh-xEJ" secondAttribute="trailing" constant="100" id="004-Fd-SzE"/>
@@ -231,20 +250,39 @@
                             <constraint firstItem="cCi-Nc-PbP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bvl-n6-F8A"/>
                             <constraint firstItem="DjV-cz-LGX" firstAttribute="top" secondItem="RVF-Dh-xEJ" secondAttribute="bottom" id="l5K-bO-dmW"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="imageArrowDown" destination="8Wb-pO-QY9" id="G87-bK-0qz"/>
                         <outlet property="imageArrowLeft" destination="q99-Yc-Qua" id="oh9-i8-ZKz"/>
                         <outlet property="imageArrowRight" destination="iPx-Mc-s98" id="uEF-EJ-bga"/>
                         <outlet property="imageArrowUp" destination="oT7-ke-itN" id="ehc-FV-8iN"/>
+                        <outlet property="labelHuntedAnimalIcon" destination="fnH-Gn-KEE" id="nR6-pR-rpe"/>
                         <outlet property="labelResultScore" destination="6yh-v3-NX0" id="LAc-Gp-82J"/>
-                        <outlet property="labelSelectedPlayerIcon" destination="fnH-Gn-KEE" id="nR6-pR-rpe"/>
                         <outlet property="labelTimer" destination="uAM-UB-J9j" id="UnY-at-jmJ"/>
                         <segue destination="JgY-8G-n3R" kind="show" identifier="result" id="dju-w2-wV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="owx-fr-KAg">
+                    <connections>
+                        <action selector="imageArrowUpTappedWithTapGestureRecognizer:" destination="BYZ-38-t0r" id="lmr-3z-aUT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="MjG-vx-Bc4">
+                    <connections>
+                        <action selector="imageArrowRightTappedWithTapGestureRecognizer:" destination="BYZ-38-t0r" id="BWF-xA-ZOe"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5uj-fn-WEU">
+                    <connections>
+                        <action selector="imageArrowLeftTappedWithTapGestureRecognizer:" destination="BYZ-38-t0r" id="mDP-9Y-Qf1"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="qVI-Za-c9F">
+                    <connections>
+                        <action selector="imageArrowDownTappedWithTapGestureRecognizer:" destination="BYZ-38-t0r" id="gU9-0m-sa2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="166.66666666666669" y="119.86607142857142"/>
         </scene>
@@ -268,5 +306,8 @@
         <namedColor name="kukaszArrow">
             <color red="0.40000000000000002" green="0.47450980392156861" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
